@@ -15,18 +15,21 @@ class MainController < ApplicationController
   	
 
   	@artist = artists.first
-  	@relateds_array = get_related_names
+  	@url = @artist.images.last["url"]
+  	@relateds_array = get_related_artists_info
   end
 
   private
-  	def get_related_names
+  	def get_related_artists_info
   		relateds = @artist.related_artists
   		arr = []
   		relateds.each do |related|
-  			name = related.name
-  			arr << name
+  			# name = related.name
+  			arr << related
   		end
   		arr
   	end
+
+
 end
   	
