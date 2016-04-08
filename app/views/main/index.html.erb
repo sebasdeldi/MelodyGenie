@@ -8,30 +8,34 @@
 	    <% end %>
 
 	</div>
-	<p>Your Artist is <%= @artist.name %>, so you might like the following artists:</p>
 
-	<% if @artist.images.any? %>
-		<img src="<%= @url %>">
-		<%else%>
-			<p>No picture available :(</p>
-	<%end%>
-	
+	<% if @artist == nil %>
+		<p>Your Artist was not found.</p>
+	<%else%>
+		<p>Your Artist is <%= @artist.name %>, so you might like the following artists:</p>
 
-	<div class="related-artists">
-		<% @relateds_array.each do |related| %>
-			<br>
-			<%= related.name %>
-
-			<% if related.images.any? %>
-				<img src=" <%=related.images.last["url"] %>" alt=":)">
-				<%else%>
-					<p>No picture available :(</p>
-			<%end%>
-
-			<br>
+		<% if @artist.images.any? %>
+			<img class="artist_profile_pic" src="<%= @artist.images.first["url"] %>" alt=":)">
+			<%else%>
+				<p>No picture available :(</p>
 		<%end%>
-	</div>
-	
+		
+
+		<div class="related-artists">
+			<% @relateds_array.each do |related| %>
+				<br>
+				<%= related.name %>
+
+				<% if related.images.any? %>
+					<img class="artist_profile_pic" src=" <%=related.images.first["url"] %>" alt=":)">
+					<%else%>
+						<p>No picture available :(</p>
+				<%end%>
+
+				<br>
+			<%end%>
+		</div>
+	<%end %>
 </div>
 
 

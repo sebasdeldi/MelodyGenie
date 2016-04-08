@@ -12,15 +12,20 @@ class MainController < ApplicationController
 
 
   	artists = RSpotify::Artist.search(@search_value)
-  	
 
   	@artist = artists.first
-  	@url = @artist.images.last["url"]
-  	@relateds_array = get_related_artists_info
+
+  	if @artist == nil
+  		flash[:notice] = "Artist not found"
+  	else
+  		@relateds_array = get_related_artists_info
+  	end
+  	
   end
 
   private
   	def get_related_artists_info
+
   		relateds = @artist.related_artists
   		arr = []
   		relateds.each do |related|
