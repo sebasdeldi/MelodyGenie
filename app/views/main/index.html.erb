@@ -1,41 +1,61 @@
 <div class="container">
 
-	<div>
-	    <%= form_tag( main_index_path, :method => "get") do %>
-	      <%= label_tag(:artist_search, "Search for:") %>
-	      <%= text_field_tag(:artist_search) %>
-	      <%= submit_tag("Search") %>
-	    <% end %>
 
+  	<div class="ui text container main">
+
+	    <div class="ui search">
+
+	    </div>
+
+	    <h1 class="ui inverted header">
+	      MusiConqueror
+	    </h1>
+
+	    <div class="ui fluid search">
+	      <div class="ui icon input">
+	      	<%= form_tag( main_index_path, :method => "get") do %>
+		      	<%= text_field_tag :artist_search, "", class: "prompt", placeholder: "Type an Artist you already like...", style: "height: 55px; width: 555px;"  %>
+		    <%end%>
+		    <i class="search icon"></i>
+	      </div>
+	      <div class="results"></div>
+	    </div>
+
+	    <h2>Find Artists you love for free.</h2>
+
+		    
 	</div>
 
-	<% if @artist == nil %>
-		<p>Your Artist was not found.</p>
-	<%else%>
-		<p>Your Artist is <%= @artist.name %>, so you might like the following artists:</p>
 
-		<% if @artist.images.any? %>
-			<img class="artist_profile_pic" src="<%= @artist.images.first["url"] %>" alt=":)">
-			<%else%>
-				<p>No picture available :(</p>
-		<%end%>
-		
+	<div class="search-result">
+		<% if @artist == nil %>
+			<p>Your Artist was not found.</p>
+		<%else%>
+			<p>Your Artist is <%= @artist.name %>, so you might like the following artists:</p>
 
-		<div class="related-artists">
-			<% @relateds_array.each do |related| %>
-				<br>
-				<%= related.name %>
-
-				<% if related.images.any? %>
-					<img class="artist_profile_pic" src=" <%=related.images.first["url"] %>" alt=":)">
-					<%else%>
-						<p>No picture available :(</p>
-				<%end%>
-
-				<br>
+			<% if @artist.images.any? %>
+				<img class="artist_profile_pic" src="<%= @artist.images.first["url"] %>" alt=":)">
+				<%else%>
+					<p>No picture available :(</p>
 			<%end%>
-		</div>
-	<%end %>
+			
+
+			<div class="related-artists">
+				<% @relateds_array.each do |related| %>
+					<br>
+					<%= related.name %>
+
+					<% if related.images.any? %>
+						<img class="artist_profile_pic" src=" <%=related.images.first["url"] %>" alt=":)">
+						<%else%>
+							<p>No picture available :(</p>
+					<%end%>
+
+					<br>
+				<%end%>
+			</div>
+		<%end %>
+	</div>	
 </div>
 
 

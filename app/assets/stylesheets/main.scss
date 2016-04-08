@@ -1,6 +1,29 @@
+@import "semantic-ui";
+$dark: #1b1c1d;
+
 body{
-	background: black;
+	background: $dark;
 	color:white;
+
+	.ui.text.container.main{
+		h1{
+			font-size: 4em;
+			font-weight: normal;
+		}
+
+	
+		text-align: center;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		/* bring your own prefixes */
+		transform: translate(-50%, -50%);
+	}
+
+
+	.search-result{
+		display: none;
+	}
 }
 
 .artist_profile_pic{
