@@ -4,9 +4,11 @@ class MainController < ApplicationController
 
   def index
 
-  	@search_value = "holder"
+
+
+  	@search_value = " "
     if params[:artist_search].present?
-      @search_value = params[:artist_search]
+      	@search_value = params[:artist_search]
     end
     
 
@@ -14,12 +16,19 @@ class MainController < ApplicationController
   	artists = RSpotify::Artist.search(@search_value)
 
   	@artist = artists.first
-
-  	if @artist == nil
-  		flash[:notice] = "Artist not found"
+  			
+  	if @artist == nil 
+  		flash[:notice] = " "
   	else
+
   		@relateds_array = get_related_artists_info
   	end
+
+  	# respond_to do |format|
+  	# 	format.html
+  	#    format.js   
+  	# end
+
   	
   end
 
