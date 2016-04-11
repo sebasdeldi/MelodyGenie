@@ -13,13 +13,75 @@ body{
 			font-weight: normal;
 		}
 
-	
 		text-align: center;
 		position: fixed;
 		top: 50%;
 		left: 50%;
 	
 		transform: translate(-50%, -50%);
+
+		.prompt{
+			width: 555px;
+			height: 55px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+	    .ui.text.container.main {
+	        h1{
+	        	font-size: 3em;
+	        }
+
+			
+			transform: translate(-50%, -50%);
+	        .prompt{
+	        	width: 455px;
+	        }
+	    }
+
+	    .ui.grid{
+	    	margin-left:-3rem;
+	    }
+	}
+
+
+	@media screen and (max-width: 582px) {
+	    .ui.text.container.main {
+	        h1{
+	        	font-size: 2.8em;
+	        }
+
+	        .prompt{
+	        	width: 355px;
+	        }
+	    }
+	}
+
+
+	@media screen and (max-width: 482px) {
+	    .ui.text.container.main {
+
+	        h1{
+	        	font-size: 2.5em;
+	        }
+
+	        .prompt{
+	        	width: 300px;
+	        }
+	    }
+	}
+
+
+	@media screen and (max-width: 400px) {
+	    .ui.text.container.main {
+	        h1{
+	        	font-size: 2.3em;
+	        }
+
+	        .prompt{
+	        	width: 260px;
+	        }
+	    }
 	}
 
 
@@ -38,19 +100,20 @@ body{
 		}
 
 		.ui.link.cards{
-			width: 95%;
-/*			background: #eee;*/
+			width: 80%;
 			margin:  auto;
 			position: relative;
 			text-align:center;
-
+			padding-top: 100px;
+			padding-bottom: 100px;
 
 
 
 			.card{
 				
 				display: inline-block;
-				margin-right: 35px;
+				margin-right: auto;
+				margin-left: auto;
 				margin-bottom: 35px;	
 			}
 
@@ -67,53 +130,10 @@ body{
 			}
 		}
 
-		/*@media screen and (min-width: 1194px) {
-			.card{
-				
-				margin-right: 80px;
-			}
-		}*/
-
-
-
-
-
 	}
 }
 
 
-
-
-/*.ui.link.cards{
-	
-	padding: 100px !important;
-}
-
-@media screen and (max-width: 1184px) {
-	.ui.link.cards{
-		
-		padding: 150px !important;
-	}
-}*/
-
-/*@media screen and (max-width: 977px) {
-	.ui.link.cards{
-		
-		margin-right: 0 !important;
-		padding-right: 0 !important;
-		margin-left: 0 !important;
-		padding-left: 0 !important;
-
-		width: 100%;
-		left: 0;
-		right: 0;
-		
-	}
-}*/
-
-/*.card.custom{
-	margin: 25px !important;
-}*/
 
 
 

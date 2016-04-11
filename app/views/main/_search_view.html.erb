@@ -9,7 +9,7 @@
 				    <div class="ui fluid search">
 				      <div class="ui icon input">
 				      	<%= form_tag( main_index_path, :method => "get", class: "search-form", remote: true ) do %>
-					      	<%= text_field_tag :artist_search, "", class: "prompt", placeholder: "Type an Artist you already like...", style: "height: 55px; width: 555px;", autocomplete:"off" %>
+					      	<%= text_field_tag :artist_search, "", class: "prompt", placeholder: "Type an Artist you already like...", autocomplete:"off" %>
 					    <%end%>
 					    <i class="search icon"></i>
 				      </div>
