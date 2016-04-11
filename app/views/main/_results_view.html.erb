@@ -1,29 +1,66 @@
+
 <div class="search-result">
 	<% if @artist == nil %>
 		<p> </p>
 	<%else%>
-		<p>Your Artist is <%= @artist.name %>, so you might like the following artists:</p>
-
+<!-- 			<p>Your Artist is <%= @artist.name %>, so you might like the following artists:</p>
+-->
 		<% if @artist.images.any? %>
-			<img class="artist_profile_pic" src="<%= @artist.images.first["url"] %>" alt=":)">
+			<!-- <img class="artist_profile_pic" src="<%= @artist.images.first["url"] %>" alt=":)"> -->
 			<%else%>
 				<p>No picture available :(</p>
 		<%end%>
 		
-
+		
 		<div class="related-artists">
-			<% @relateds_array.each do |related| %>
-				<br>
-				<%= related.name %>
+			<div class="ui link cards">
 
-				<% if related.images.any? %>
-					<img class="artist_profile_pic" src=" <%=related.images.first["url"] %>" alt=":)">
-					<%else%>
-						<p>No picture available :(</p>
+				<% @relateds_array.each do |related| %>
+
+					<div class="card custom">
+
+						<div class="image custom">
+
+							<% if related.images.any? %>
+								<img class="artist_profile_pic" src=" <%=related.images.first["url"] %>" alt=":)">
+
+								<%else%>
+									<p class="no-picture">No picture available :(</p>
+							<%end%>
+						</div>
+
+						<div class="content">
+							<div class="header"><%= related.name %></div>
+							<div class="meta">
+								<% if related.genres.first == nil%>
+									<p>No specified genre</p>
+								<%end%>
+						    	<%= related.genres.first %> 
+						  	</div>
+
+						  	<div class="description">
+						    	<i class="icon heartbeat"></i> Popularity: <%= related.popularity %> / 100
+						  	</div>
+						</div>
+
+						<div class="extra content">
+			
+						  <span>
+						    <i class="users icon"></i>
+						    <%= related.followers['total'] %> Followers on <i class="spotify icon"></i>
+						  </span>
+						</div>
+
+						<div class="ui bottom attached button">
+						  <i class="music icon"></i>
+						  Listen most popular tracks
+						</div>
+
+					</div>
+
 				<%end%>
-
-				<br>
-			<%end%>
+			</div>
 		</div>
 	<%end %>
-</div>	
+</div>
+

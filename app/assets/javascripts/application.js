@@ -17,7 +17,5 @@
 // Loads all Semantic javascripts
 //= require semantic-ui
 //= require show_results
-
-
-
+//= require loading_results
 

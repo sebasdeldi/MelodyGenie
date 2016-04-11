@@ -1,22 +1,26 @@
   	<div class="ui text container main">
 
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				    <h1 class="ui inverted header">
+				      MusicFinder
+				    </h1>
+
+				    <div class="ui fluid search">
+				      <div class="ui icon input">
+				      	<%= form_tag( main_index_path, :method => "get", class: "search-form", remote: true ) do %>
+					      	<%= text_field_tag :artist_search, "", class: "prompt", placeholder: "Type an Artist you already like...", style: "height: 55px; width: 555px;", autocomplete:"off" %>
+					    <%end%>
+					    <i class="search icon"></i>
+				      </div>
+
+				    </div>
+
+				    <h2>Find Artists you love.</h2>
 
 
-	    <h1 class="ui inverted header">
-	      MusicFinder
-	    </h1>
-
-	    <div class="ui fluid search">
-	      <div class="ui icon input">
-	      	<%= form_tag( main_index_path, :method => "get", class: "search-form", remote: true ) do %>
-		      	<%= text_field_tag :artist_search, "", class: "prompt", placeholder: "Type an Artist you already like...", style: "height: 55px; width: 555px;", autocomplete:"off" %>
-		    <%end%>
-		    <i class="search icon"></i>
-	      </div>
-
-	    </div>
-
-	    <h2>Find Artists you love.</h2>
-
-		    
+				    <div class="ui inline loader large"></div>
+			</div>
+		</div>
+    
 	</div>

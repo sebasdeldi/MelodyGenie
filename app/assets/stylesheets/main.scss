@@ -5,6 +5,8 @@ body{
 	background: $dark;
 	color:white;
 
+
+
 	.ui.text.container.main{
 		h1{
 			font-size: 4em;
@@ -16,18 +18,105 @@ body{
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		/* bring your own prefixes */
+	
 		transform: translate(-50%, -50%);
 	}
 
 
 	.search-result{
 		
+
+		.no-picture{
+			color: black;
+			text-align: center;
+			font-size: 20px;
+			margin-top: 90px;
+		}
+
+		.spotify{
+			font-size: 20px;
+		}
+
+		.ui.link.cards{
+			width: 95%;
+/*			background: #eee;*/
+			margin:  auto;
+			position: relative;
+			text-align:center;
+
+
+
+
+			.card{
+				
+				display: inline-block;
+				margin-right: 35px;
+				margin-bottom: 35px;	
+			}
+
+
+			.card .image.custom{
+				width: 290px !important;
+				height: 210px !important;
+			}
+
+
+			.card .image.custom .artist_profile_pic{
+				width: 290px !important;
+				height: 210px !important;
+			}
+		}
+
+		/*@media screen and (min-width: 1194px) {
+			.card{
+				
+				margin-right: 80px;
+			}
+		}*/
+
+
+
+
+
 	}
 }
 
-.artist_profile_pic{
-	width: 70px;
-	height: 70px;
-	border-radius:50%;
+
+
+
+/*.ui.link.cards{
+	
+	padding: 100px !important;
 }
+
+@media screen and (max-width: 1184px) {
+	.ui.link.cards{
+		
+		padding: 150px !important;
+	}
+}*/
+
+/*@media screen and (max-width: 977px) {
+	.ui.link.cards{
+		
+		margin-right: 0 !important;
+		padding-right: 0 !important;
+		margin-left: 0 !important;
+		padding-left: 0 !important;
+
+		width: 100%;
+		left: 0;
+		right: 0;
+		
+	}
+}*/
+
+/*.card.custom{
+	margin: 25px !important;
+}*/
+
+
+
+
+
+
