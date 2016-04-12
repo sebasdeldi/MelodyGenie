@@ -119,6 +119,7 @@ body{
 
 
 			.card .image.custom{
+				padding: 0 !important;
 				width: 290px !important;
 				height: 210px !important;
 			}
@@ -129,16 +130,18 @@ body{
 				height: 210px !important;
 			}
 
-			@media screen and (max-width: 400px) {
+/*			@media screen and (max-width: 400px) {
 				.card .image.custom .artist_profile_pic{
 					width: 288px !important;
 					height: 210px !important;
 				}
 			}
+			@media screen and (max-width: 400px) {
+				.ui.bottom.attached.button{
+					width: 288px !important;
+				}
+			}*/
 
-			.ui.bottom.attached.button{
-				width: 290px;
-			}
 		}
 
 	}
