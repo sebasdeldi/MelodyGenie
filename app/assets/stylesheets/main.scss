@@ -119,16 +119,21 @@ body{
 
 
 			.card .image.custom{
-				margin: 0px !important;
 				width: 290px !important;
 				height: 210px !important;
 			}
 
 
 			.card .image.custom .artist_profile_pic{
-				margin: 0px !important;
 				width: 290px !important;
 				height: 210px !important;
+			}
+
+			@media screen and (max-width: 400px) {
+				.card .image.custom .artist_profile_pic{
+					width: 280px !important;
+					height: 210px !important;
+				}
 			}
 		}
 
