@@ -4,11 +4,11 @@ class MainController < ApplicationController
 
   def index
 
-
+    @artist = 'Alt j'
 
   	@search_value = " "
     if params[:artist_search].present?
-      	@search_value = params[:artist_search]
+      @search_value = params[:artist_search]
     end
     
 
@@ -18,7 +18,10 @@ class MainController < ApplicationController
   	@artist = artists.first
   			
   	if @artist == nil 
-  		flash[:notice] = " "
+  	   # respond_to do |format|
+      #     format.html
+      #     format.js {render inline: "location.reload();" }
+      #  end
   	else
 
   		@relateds_array = get_related_artists_info

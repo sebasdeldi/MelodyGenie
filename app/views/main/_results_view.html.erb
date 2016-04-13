@@ -1,20 +1,15 @@
 
 <div class="search-result">
+	<% if @artist == nil %>
+		<script>
+			$('.ui.basic.modal').modal('show');
+		</script>
+		<%= render 'artist_not_found_modal' %>
+	<%else%>
 
 
 		
 		<div class="related-artists">
-			<center>
-				<% if @artist == nil %>
-					<p> </p>
-				<%else%>
-					<p>Your Artist is <%= @artist.name %>, so you might like the following artists:</p>
-					<% if @artist.images.any? %>
-						<img class="artist_profile_pic" src="<%= @artist.images.first["url"] %>" alt=":)">
-						<%else%>
-						<p>No picture available :(</p>
-				<%end%>
-			</center>
 			<div class="ui link cards">
 		
 
@@ -22,7 +17,7 @@
 
 					<div class="card custom">
 
-						<div class="image custom">
+						<div class="image custom" >
 
 							<% if related.images.any? %>
 								<img class="artist_profile_pic" src=" <%=related.images.first["url"] %>" alt=":)">

@@ -10,5 +10,15 @@ $( document ).ajaxStart(function() {
 
 $( document ).ajaxComplete(function() {
 	$('.ui.inline.loader').removeClass('active');
+
+	$('.ui.green.basic.inverted.button').click(function(){
+	  location.reload();
+	});
+
+	$('.close.icon').click(function(){
+	  location.reload();
+	});
+
  	// alert('ajax finished');
 });
+

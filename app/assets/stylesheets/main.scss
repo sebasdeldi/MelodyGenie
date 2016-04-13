@@ -1,8 +1,12 @@
 @import "semantic-ui";
 $dark: #1b1c1d;
 
+.frown.icon.custom{
+	font-size: 150px;
+}
+
 body{
-	background: $dark;
+	background: black;
 	color:white;
 
 
