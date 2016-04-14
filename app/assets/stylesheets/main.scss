@@ -5,10 +5,30 @@ $dark: #1b1c1d;
 	font-size: 150px;
 }
 
+
 body{
 	background: black;
 	color:white;
 
+	.ui.modal > .content > .image.custom{
+		width: 290px;
+	}
+
+
+	@media screen and (max-width: 375px) {
+
+
+		.ui.modal > .content > .image.custom{
+			width: 288px !important;
+		}
+	}
+
+	@media screen and (max-width: 320px) {
+
+		.ui.modal > .content > .image.custom{
+			width: 253px !important;
+		}
+	}
 
 
 	.ui.text.container.main{
@@ -29,6 +49,8 @@ body{
 			height: 55px;
 		}
 	}
+
+
 
 	@media screen and (max-width: 769px) {
 	    .ui.text.container.main {
@@ -89,6 +111,17 @@ body{
 	}
 
 
+
+/*	@media screen and (max-width: 450px) {
+
+
+		.ui.modal > .content > .image.custom{
+			width: 290px;
+		}
+
+	}*/
+
+
 	.search-result{
 		
 
@@ -102,6 +135,8 @@ body{
 		.spotify{
 			font-size: 20px;
 		}
+
+
 
 		.ui.link.cards{
 			width: 80%;
@@ -122,6 +157,12 @@ body{
 			}
 
 
+
+
+
+
+
+
 			.card .image.custom{
 
 				width: 290px !important;
@@ -139,6 +180,7 @@ body{
 					width: 288px !important;
 					height: 210px !important;
 				}
+
 			}
 
 			@media screen and (max-width: 320px) {
@@ -146,13 +188,12 @@ body{
 					width: 253px !important;
 					height: 210px !important;
 				}
+
+
 			}
-/*			@media screen and (max-width: 380px) {
-				.ui.bottom.attached.button{
-					width: 288px !important;
-				}
-			}
-*/
+
+
+
 		}
 
 	}
