@@ -24,7 +24,7 @@ class MainController < ApplicationController
       #  end
   	else
 
-  		@relateds_array = get_related_artists_info
+  		@relateds_array = @artist.related_artists
   	end
 
   	# respond_to do |format|
@@ -35,17 +35,17 @@ class MainController < ApplicationController
   	
   end
 
-  private
-  	def get_related_artists_info
+  # private
+  # 	def get_related_artists_info
 
-  		relateds = @artist.related_artists
-  		arr = []
-  		relateds.each do |related|
-  			# name = related.name
-  			arr << related
-  		end
-  		arr
-  	end
+  # 		relateds = @artist.related_artists
+  # 		arr = []
+  # 		relateds.each do |related|
+  # 			# name = related.name
+  # 			arr << related
+  # 		end
+  # 		arr
+  # 	end
 
 
 end

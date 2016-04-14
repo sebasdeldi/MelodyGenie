@@ -18,4 +18,5 @@
 //= require semantic-ui
 //= require artist_not_found
 //= require loading_results
+//= show_artist_profile
 
