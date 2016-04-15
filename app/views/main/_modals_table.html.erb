@@ -1,0 +1,39 @@
+<table class="ui very basic collapsing celled table">
+
+  <tbody>
+    <% top_songs.each do |song| %>
+      <tr>
+        <td>
+          <h4 class="ui image header">
+            <img src="<%= song.album.images.first["url"] %>" class="ui mini rounded image">
+            <div class="content">
+              <p class="crop"><%= song.name %></p>
+              <div class="sub header crop"><%= song.album.name %></div>
+            </div>
+          </h4>
+          <br>
+          <audio controls>
+            <source src="<%= song.preview_url %>">
+            Your browser does not support the audio element.
+          </audio>
+
+        </td>
+
+        <td>
+          <div class="modal-icons">
+
+            <a target="_blank" href="https://www.google.com/search?q=<%=song.name %>+free+download&gws_rd=ssl">
+              <i data-content="Let us help you find where to get this track for free" class="cloud download icon" ></i>
+            </a> 
+
+            <a target="_blank" href="https://play.spotify.com/album/<%=song.album.id %>">
+              <i data-content="Listen the whole album for free on Spotify" class="spotify icon"> </i>
+            </a>
+            
+          </div>
+          
+        </td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>

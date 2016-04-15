@@ -12,6 +12,10 @@ $( document ).ajaxComplete(function() {
 	});
 	
 
+	$('.modal-icons i')
+	  .popup()
+	;
+
 
 
 

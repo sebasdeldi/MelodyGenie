@@ -15,7 +15,7 @@
 				<% @relateds_array.each.with_index do |related,i| %>
 					
 					<div class="card custom" data-id="<%=i%>">
-						<%= render partial: 'artist_modal', locals: {profile_pic: related.images.first["url"], index: i, artist_name: related.name} %>
+						<%= render partial: 'artist_modal', locals: {profile_pic: related.images.first["url"], index: i, artist_name: related.name, artist_songs: related.top_tracks(:US)} %>
 						
 
 						<div class="image custom" >
