@@ -1,17 +1,17 @@
 <!--NAVBAR -->
 <div class="ui fixed inverted menu">
   <div class="ui container">
-    <a href="#" class="header item">
+    <a href="#" class="header item" id="re-search">
       Melody<span class="my_blue">Genie</span>
     </a>
     <div class="item">
-    	<p>Recommendations based on <span>  </span><span class="my_blue"> <%= @artist.name %></span></p>
+    	<p class="smaller">Recommendations based on <span>  </span><span class="my_blue"> <%= @artist.name %></span></p>
     </div>
     
 
 
     <div class="right menu">
-		<a class="item" id="re-search"><i class="search icon my_blue"></i> Make another search</a>
+		<a class="item" id="re-search"><i class="search icon my_blue"></i> <p class="hide_me">Make another search</p></a>
     </div>
             
 

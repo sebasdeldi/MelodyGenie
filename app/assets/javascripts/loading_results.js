@@ -13,7 +13,7 @@ $( document ).ajaxStart(function() {
 $( document ).ajaxComplete(function() {
 	$('.ui.inline.loader').removeClass('active');
 	$('.loader-msg').css('display', 'none');
-	
+	$('body').css('background', 'black')
 
 
  	// alert('ajax finished');

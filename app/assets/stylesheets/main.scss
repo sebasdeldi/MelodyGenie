@@ -45,6 +45,7 @@ $myGreen: #6AE368;
 
 
 body{
+
 	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(background.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -54,6 +55,19 @@ body{
 
 	.ui.modal > .content{
 		width: 95%;
+	}
+
+	@media screen and (max-width: 550px) {
+
+		.ui.fixed.inverted.menu{
+			.hide_me{
+				display: none; 
+			}
+		}
+
+		.smaller{
+			font-size: 12px;
+		}
 	}
 
 /*	.ui.modal > .content > .image.custom{
