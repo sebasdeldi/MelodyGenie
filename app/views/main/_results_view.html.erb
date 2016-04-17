@@ -44,6 +44,11 @@
 		<div class="related-artists">
 			<div class="ui link cards">
 
+				<%if @relateds_array.empty? %>
+					<center><h1>This is embarrasing but your artist is kinda unknown :( </h1></center> 
+					<center><h2>what if you try with another artist?</h2></center>
+				<%end%>
+
 				<% @relateds_array.each.with_index do |related,i| %>
 					
 					<div class="card custom" data-id="<%=i%>">
