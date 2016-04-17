@@ -17,7 +17,7 @@ $( document ).ajaxComplete(function() {
 	;
 
 
-	$('#re-search').click(function(){
+	$('.search-again').click(function(){
 	  location.reload();
 	});
 

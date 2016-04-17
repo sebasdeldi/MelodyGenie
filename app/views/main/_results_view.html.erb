@@ -1,34 +1,3 @@
-<!--NAVBAR -->
-<div class="ui fixed inverted menu">
-  <div class="ui container">
-    <a href="#" class="header item" id="re-search">
-      Melody<span class="my_blue">Genie</span>
-    </a>
-    <div class="item">
-    	<p class="smaller">
-    		<span class="small_recommendation">
-    			Like <span class="my_blue"><%= @artist.name %></span>
-    		</span>
-
-    		<span class="large_recommendation">
-    			Recommendations based on <span class="my_blue"> <%= @artist.name %>
-    		</span>
-    	</p>
-    </div>
-    
-
-
-    <div class="right menu">
-		<a class="item" id="re-search"><i class="search icon my_blue smaller" id="re-search"></i> <p class="hide_me">Make another search</p></a>
-    </div>
-            
-
-
-  </div>
-</div>
-
-<!--NAVBAR -->
-
 <div class="search-result">
 	<% if @artist == nil %>
 		<script>
@@ -36,6 +5,39 @@
 		</script>
 		<%= render 'artist_not_found_modal' %>
 	<%else%>
+
+	<!--NAVBAR -->
+	<div class="ui fixed inverted menu">
+	  <div class="ui container">
+	    <a href="#" class="header item" id="re-search">
+	      Melody<span class="my_blue">Genie</span>
+	    </a>
+	    <div class="item">
+	    	<p class="smaller">
+	    		<span class="small_recommendation">
+	    			Like <span class="my_blue"><%= @artist.name %></span>
+	    		</span>
+
+	    		<span class="large_recommendation">
+	    			Recommendations based on <span class="my_blue"> <%= @artist.name %>
+	    		</span>
+	    	</p>
+	    </div>
+	    
+
+
+	    <div class="right menu">
+			<a class="item search-again"><i class="search icon my_blue smaller"></i> <p class="hide_me">Make another search</p></a>
+	    </div>
+	            
+
+
+	  </div>
+	</div>
+
+	<!--NAVBAR -->
+
+
 
 
 		
