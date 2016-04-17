@@ -5,13 +5,21 @@
       Melody<span class="my_blue">Genie</span>
     </a>
     <div class="item">
-    	<p class="smaller">Recommendations based on <span>  </span><span class="my_blue"> <%= @artist.name %></span></p>
+    	<p class="smaller">
+    		<span class="small_recommendation">
+    			Like <span class="my_blue"><%= @artist.name %></span>
+    		</span>
+
+    		<span class="large_recommendation">
+    			Recommendations based on <span class="my_blue"> <%= @artist.name %>
+    		</span>
+    	</p>
     </div>
     
 
 
     <div class="right menu">
-		<a class="item" id="re-search"><i class="search icon my_blue"></i> <p class="hide_me">Make another search</p></a>
+		<a class="item" id="re-search"><i class="search icon my_blue smaller" id="re-search"></i> <p class="hide_me">Make another search</p></a>
     </div>
             
 

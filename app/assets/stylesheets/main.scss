@@ -68,7 +68,19 @@ body{
 		.smaller{
 			font-size: 12px;
 		}
+
+		.large_recommendation{
+			display: none;
+		}
 	}
+
+	@media screen and (min-width: 550px) {
+		.small_recommendation{
+			display: none;
+		}
+	}
+
+
 
 /*	.ui.modal > .content > .image.custom{
 		width: 290px;
