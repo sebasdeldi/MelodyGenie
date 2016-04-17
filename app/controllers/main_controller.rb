@@ -4,7 +4,7 @@ class MainController < ApplicationController
 
   def index
 
-    @artist = 'Alt j'
+    @artist = ' '
 
   	@search_value = " "
     if params[:artist_search].present?
