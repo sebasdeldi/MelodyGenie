@@ -3,6 +3,8 @@ $dark: #1b1c1d;
 $myBlue: #00C5CD;
 $myGreen: #6AE368;
 
+
+
 .ui.image.header{
 	margin-top:10px !important;
 }
@@ -43,7 +45,11 @@ $myGreen: #6AE368;
 
 
 body{
-	background: black;
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	color:white;
 
 	.ui.modal > .content{

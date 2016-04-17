@@ -1,3 +1,25 @@
+<!--NAVBAR -->
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <a href="#" class="header item">
+      Melody<span class="my_blue">Genie</span>
+    </a>
+    <div class="item">
+    	<p>Recommendations based on <span>  </span><span class="my_blue"> <%= @artist.name %></span></p>
+    </div>
+    
+
+
+    <div class="right menu">
+		<a class="item" id="re-search"><i class="search icon my_blue"></i> Make another search</a>
+    </div>
+            
+
+
+  </div>
+</div>
+
+<!--NAVBAR -->
 
 <div class="search-result">
 	<% if @artist == nil %>
