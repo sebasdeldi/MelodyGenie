@@ -30,7 +30,7 @@
 
 						<div class="content">
 							<div class="header">
-								<i class="music icon"></i> <%= related.name %> 
+								<%= related.name %> 
 							</div>
 							<div class="meta">
 								<% if related.genres.first == nil%>
@@ -40,15 +40,15 @@
 						  	</div>
 
 						  	<div class="description">
-						    	<i class="icon heartbeat"></i> Popularity: <%= related.popularity %> / 100
+						    	<i class="red icon heartbeat"></i> Popularity: <%= related.popularity %> / 100
 						  	</div>
 						</div>
 
 						<div class="extra content">
 			
 						  <span>
-						    <i class="users icon"></i>
-						    <%= related.followers['total'] %> Followers on <i class="spotify icon"></i>
+						    <i class="users icon "></i>
+						    <%= related.followers['total'] %> Followers on <i class="spotify icon my_green"></i>
 						  </span>
 						</div>
 
