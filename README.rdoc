@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Application, developed using Ruby on Rils and the Spotify API
+* The app lets you discover new artists, based on an artist that you alredy like, lesten to a preview of their top tracks, and then allows you to search for a free download for the song or listen the whole album freely on spotify.
 
-Things you may want to cover:
+About the app:
 
-* Ruby version
+* Ruby version 2.2.1
+* Rails version 4.2.5
+* FrontEnt framework Semantic-ui
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
