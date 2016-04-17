@@ -45,8 +45,9 @@
 			<div class="ui link cards">
 
 				<%if @relateds_array.empty? %>
-					<center><h1>This is embarrasing but your artist is kinda unknown :( </h1></center> 
-					<center><h2>what if you try with another artist?</h2></center>
+					<center><h1><p>This is embarrasing but <span class="my_blue"><%= @artist.name%></span> is kinda unknown :(</p> </h1></center> 
+					<br>
+					<center><h2 class="my_blue"><p>what if you try with another artist?</p></h2></center>
 				<%end%>
 
 				<% @relateds_array.each.with_index do |related,i| %>
