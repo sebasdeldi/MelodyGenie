@@ -15,7 +15,6 @@ $( document ).ajaxComplete(function() {
 	$('.loader-msg').css('display', 'none');
 	$('body').css('background', 'black')
 
-
  	// alert('ajax finished');
 });
 

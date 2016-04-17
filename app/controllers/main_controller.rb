@@ -18,35 +18,11 @@ class MainController < ApplicationController
   	@artist = artists.first
   			
   	if @artist == nil 
-  	   # respond_to do |format|
-      #     format.html
-      #     format.js {render inline: "location.reload();" }
-      #  end
+      
   	else
 
   		@relateds_array = @artist.related_artists
   	end
-
-  	# respond_to do |format|
-  	# 	format.html
-  	#    format.js   
-  	# end
-
-  	
   end
-
-  # private
-  # 	def get_related_artists_info
-
-  # 		relateds = @artist.related_artists
-  # 		arr = []
-  # 		relateds.each do |related|
-  # 			# name = related.name
-  # 			arr << related
-  # 		end
-  # 		arr
-  # 	end
-
-
 end
   	

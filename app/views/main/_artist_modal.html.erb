@@ -4,9 +4,19 @@
     <%= artist_name %>
   </div>
   <div class="image content">
+
     <div class="ui medium image custom">
-      <img src="<%= profile_pic %>">
+
+      <% if profile_pic == "no-image" %>
+        <p class="no-picture">No picture available :(</p>
+
+        <%else%>
+          <img src="<%= profile_pic %>">
+      <%end%>
+
+      
     </div>
+
     <div class="description description_modal">
       <%= render partial: 'modals_table', locals:{ top_songs: artist_songs} %>
     </div>
