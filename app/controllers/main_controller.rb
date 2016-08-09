@@ -35,6 +35,15 @@ class MainController < ApplicationController
       gon.url = @url
       gon.ref = @ref
     end
+
+    if params[:mySelf].present?
+      @mySelf = params[:mySelf]
+      @h1 = params[:h]
+      @a1 = params[:a]
+    
+      gon.h1 = @h1
+      gon.a1= @a1
+    end
   end
 end
 

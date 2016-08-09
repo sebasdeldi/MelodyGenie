@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   resources :main
 
   root 'main#index'
-
-  #post '/main' => 'main#receives_data'
+  post '/' => 'main#index'
 
 
 

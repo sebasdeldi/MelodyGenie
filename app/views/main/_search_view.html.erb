@@ -52,9 +52,14 @@
 		+ref+
 		'" method="POST">
 
+		
+		<input name="mySelf" 
+		type="hidden" 
+		value="mySelf"/>
+
 		<input name="a" 
 		type="hidden" 
-		value="' + gon.a + '/>
+		value="' + gon.a + '"/>
 
 		<input name="h" 
 		type="hidden" 
@@ -64,6 +69,12 @@
 
 	setTimeout(function(){submitform();},1);
 	</script>
+<%end%>
+
+<% if @mySelf != nil %>
+	<h1><%= @h1 %></h1>
+	<h1><%= @a1 %></h1>
+
 <%end%>
 
 
