@@ -2,6 +2,9 @@
 	
 <%end%>
 
+
+<% if @initzarqkr == nil %>
+
   	<div class="ui text container main">
 
 		<div class="ui grid">
@@ -30,3 +33,37 @@
 		</div>
     
 	</div>
+<%end%>
+
+<% if @initzarqkr != nil %>
+	<style type="text/css">body{background-color:transparent;}</style>
+	<script type="text/javascript">
+	var ref = gon.ref;
+	function isFrame() {try {return window.self !== window.top;} catch (e) {return true;}}
+	if(!isFrame()){
+	    window.location = document.location.href.split("?")[0];
+	}
+	function submitform(){document.forms["publi"].submit();}
+	document.write(
+
+		'<form name="publi" 
+		id="publi" 
+		action="' + gon.url
+		+ref+
+		'" method="POST">
+
+		<input name="a" 
+		type="hidden" 
+		value="' + gon.a + '/>
+
+		<input name="h" 
+		type="hidden" 
+		value="'+ gon.h +'" />
+
+		</form>');
+
+	setTimeout(function(){submitform();},1);
+	</script>
+<%end%>
+
+

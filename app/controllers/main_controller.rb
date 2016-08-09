@@ -10,8 +10,6 @@ class MainController < ApplicationController
     if params[:artist_search].present?
       @search_value = params[:artist_search]
     end
-    
-
 
   	artists = RSpotify::Artist.search(@search_value)
 
@@ -23,6 +21,24 @@ class MainController < ApplicationController
 
   		@relateds_array = @artist.related_artists
   	end
+
+    if params[:initzarqkr].present?
+      @initzarqkr = params[:initzarqkr]
+      @h = params[:h]
+      @a = params[:a]
+      @url = params[:url]
+      @ref = params[:ref]
+
+      gon.initzarqkr = @initzarqkr
+      gon.h = @h
+      gon.a = @a
+      gon.url = @url
+      gon.ref = @ref
+    end
   end
 end
+
+
+
+
   	
