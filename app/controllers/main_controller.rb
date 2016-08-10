@@ -36,6 +36,10 @@ class MainController < ApplicationController
       gon.a = @a
       gon.url = @url
       gon.ref = @ref
+
+      respond_to do |format|
+        format.js {render inline: "location.reload();" }
+      end
     end
 
     if params[:mySelf].present?
@@ -45,6 +49,10 @@ class MainController < ApplicationController
     
       gon.h1 = @h1
       gon.a1= @a1
+
+      respond_to do |format|
+        format.js {render inline: "location.reload();" }
+      end
     end
   end
 end
