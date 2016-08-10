@@ -1,6 +1,5 @@
 class MainController < ApplicationController
 
-  skip_before_action :verify_authenticity_token, only: [:get_external]
 
 	require 'rspotify'
 
