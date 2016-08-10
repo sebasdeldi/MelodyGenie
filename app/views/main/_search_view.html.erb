@@ -3,42 +3,35 @@
 <%end%>
 
 
-<% if !@show_ad %>
 
-  	<div class="ui text container main">
+<div class="ui text container main">
 
-		<div class="ui grid">
-			<div class="sixteen wide column">
-				    <h1 class="ui inverted header">
-				      Melody<span class="my_blue">Genie</span>
-				    </h1>
+<div class="ui grid">
+	<div class="sixteen wide column">
+		    <h1 class="ui inverted header">
+		      Melody<span class="my_blue">Genie</span>
+		    </h1>
 
-				    <div class="ui fluid search">
-				      <div class="ui icon input">
-				      	<%= form_tag( main_index_path, :method => "get", class: "search-form", remote: true ) do %>
-					      	<%= text_field_tag :artist_search, "", class: "prompt", placeholder: "Type an Artist you already like...", autocomplete:"off" %>
-					    <%end%>
-					    <i class="search icon"></i>
-				      </div>
+		    <div class="ui fluid search">
+		      <div class="ui icon input">
+		      	<%= form_tag( main_index_path, :method => "get", class: "search-form", remote: true ) do %>
+			      	<%= text_field_tag :artist_search, "", class: "prompt", placeholder: "Type an Artist you already like...", autocomplete:"off" %>
+			    <%end%>
+			    <i class="search icon"></i>
+		      </div>
 
-				    </div>
+		    </div>
 
-				    <h2>Find Artists you love.</h2>
+		    <h2>Find Artists you love.</h2>
 
 
-				    <div class="ui inline loader large"></div>
-				    <br>
-				    <div class="loader-msg"></div>
-			</div>
-		</div>
-    
+		    <div class="ui inline loader large"></div>
+		    <br>
+		    <div class="loader-msg"></div>
 	</div>
-<%end%>
+</div>
 
+</div>
 
-<% if @show_ad %>
-	<h1><%= @h1 %></h1>
-	<h1><%= @a1 %></h1>
-<%end%>
 
 

@@ -24,20 +24,8 @@ class MainController < ApplicationController
   		@relateds_array = @artist.related_artists
   	end
 
-
-    if params[:mySelf].present?
-      @show_ad = true
-      @h1 = params[:h]
-      @a1 = params[:a]
-    end
   end
 
-  def get_external
-
-    if params[:initzarqkr].present?
-      redirect_to root_path(h: params[:h], a: params[:a], mySelf: true)
-    end
-  end
 end
 
 
