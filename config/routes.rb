@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :main
-
   root 'main#index'
+  post '/' => 'main#index'
   post '/external' => 'main#get_external'
 
 
