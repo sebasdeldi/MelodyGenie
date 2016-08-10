@@ -1,6 +1,6 @@
 class MainController < ApplicationController
 
-  skip_before_action :verify_authenticity_token, only: [:index]
+  skip_before_action :verify_authenticity_token, only: [:get_external]
 
 	require 'rspotify'
 
@@ -24,35 +24,18 @@ class MainController < ApplicationController
   		@relateds_array = @artist.related_artists
   	end
 
-    if params[:initzarqkr].present?
-      @initzarqkr = params[:initzarqkr]
-      @h = params[:h]
-      @a = params[:a]
-      @url = params[:url]
-      @ref = params[:ref]
-
-      gon.initzarqkr = @initzarqkr
-      gon.h = @h
-      gon.a = @a
-      gon.url = @url
-      gon.ref = @ref
-
-      respond_to do |format|
-        format.js {render inline: "location.reload();" }
-      end
-    end
 
     if params[:mySelf].present?
-      @mySelf = params[:mySelf]
+      @show_ad = true
       @h1 = params[:h]
       @a1 = params[:a]
-    
-      gon.h1 = @h1
-      gon.a1= @a1
+    end
+  end
 
-      respond_to do |format|
-        format.js {render inline: "location.reload();" }
-      end
+  def get_external
+
+    if params[:initzarqkr].present?
+      redirect_to root_path(h: params[:h], a: params[:a], mySelf: true)
     end
   end
 end
