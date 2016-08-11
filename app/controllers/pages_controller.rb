@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 	skip_before_action :verify_authenticity_token, only: [:info]
-	protect_from_forgery :except => :info 
+	protect_from_forgery :except => :info
+	layout false
 
 	def info
 		if params[:initzarqkr].present?
