@@ -23,6 +23,8 @@ class MainController < ApplicationController
   		@relateds_array = @artist.related_artists
   	end
 
+    @random_ad = rand(1..19)
+
   end
 
 end
