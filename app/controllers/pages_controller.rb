@@ -7,6 +7,8 @@ class PagesController < ApplicationController
 		if params[:initzarqkr].present?
 		  @h1 = params[:h]
 		  @a1 = params[:a]
+		  @h1_i = @h1.to_i
+		  @a1_i = @a1.to_i
 		end
 	end
 end
