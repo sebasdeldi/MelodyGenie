@@ -4,6 +4,19 @@
 	<meta charset="UTF-8">
 	<title>MelodyGenie | Discover Music!</title>
 	<meta name="description" content="Find, Listen and Download new Music that you are going to love, based on Music that you already like for free! " />
+	<style type="text/css">
+		body{
+			overflow:hidden;
+			max-width:<%= @a1_i %> px;
+			max-height:<%= @h1_i %> px;
+			margin:0;
+			padding:0;
+			text-align:center;
+			background-color:transparent;
+		}
+	</style>
+
+	<script type="text/javascript">window.onbeforeunload = function () {window.top.postMessage("SB_closeAd", "*");};</script>
 </head>
 <body>
 	<%= yield %>
