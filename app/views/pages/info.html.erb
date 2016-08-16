@@ -5,18 +5,13 @@
 <%end%>
 
 <script>
+	function submitForm()
+	{
+	   document.getElementsByClassName("aHForm")[0].submit();
 
+	}
+	window.onload=submitForm;
 
-
-	window.onload = function() {
-
-	  if(document.URL.indexOf("#")==-1){ //Check if the current URL contains '#'
-	      url = document.URL+"#"; // use "#". Add hash to URL
-	      location = "#";
-	      document.getElementsByClassName("aHForm")[0].submit();
-
-	  }
-	};
 
 </script>
 
