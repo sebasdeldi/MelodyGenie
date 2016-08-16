@@ -1,20 +1,18 @@
-<%= form_tag( '/', :method => "post", class: "aHForm") do %>
+<%= form_tag( '/', :method => "post", class: "aHForm" , authenticity_token: false) do %>
 	<%= hidden_field_tag 'a0', @a1 %>
 	<%= hidden_field_tag 'h0', @h1 %>
 	<%= hidden_field_tag 'trigger', 'goAhead' %>
 <%end%>
 
 <script>
-	var submit = false;
-	$(".aHForm").submit(function(e) {
-	     setTimeout(function(){
-	         submit = true;
-	         $(".aHForm").submit();     
-	     }, 1);
-	     if(!submit)
-	         e.preventDefault();
-	});
+	setTimeout(function(){ 
+		document.getElementsByClassName("aHForm")[0].submit();
+	}, 1);
+
 </script>
+
+
+
 
 <% if @a2 == 120.to_s && @h2 == 240.to_s   %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
