@@ -6,7 +6,6 @@
 
 <script>
 	var start = <%= @init %>;
-	console.log(trigger);
 	window.onload = function() {
 	  if (start == 1){
 	  	document.getElementsByClassName("aHForm")[0].submit();
@@ -196,7 +195,7 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
 <% elsif @a2 == nil || @h2 == nil %>
-	
+
 <% else %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- responsive -->
