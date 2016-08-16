@@ -3,12 +3,16 @@ class PagesController < ApplicationController
 	protect_from_forgery :except => :info
 	layout "second"
 
+
 	def info
 		if params[:initzarqkr].present?
 		  @h1 = params[:h]
 		  @a1 = params[:a]
-		  @h1_i = @h1.to_i
-		  @a1_i = @a1.to_i
+		end
+
+		if params[:trigger].present?
+			@h2 = params[:h0]
+			@a2 = params[:a0]
 		end
 	end
 end
