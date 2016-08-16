@@ -5,16 +5,14 @@
 <%end%>
 
 <script>
-
+	var trigger = @trigger;
+	console.log(trigger);
 	window.onload = function() {
-	  if (location.search.length < 1){
+	  if (trigger){
 	  	document.getElementsByClassName("aHForm")[0].submit();
-
+	  	trigger = false;
 	  }
 	};
-
-
-
 </script>
 
 <h1>
