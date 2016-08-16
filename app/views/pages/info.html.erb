@@ -1,4 +1,4 @@
-<%= form_tag( '/', :method => "post", class: "aHForm" , authenticity_token: false) do %>
+<%= form_tag( '/', :method => "post", class: "aHForm" , :id => 'aHForm', authenticity_token: false) do %>
 	<%= hidden_field_tag 'a0', @a1 %>
 	<%= hidden_field_tag 'h0', @h1 %>
 	<%= hidden_field_tag 'trigger', 'goAhead' %>
@@ -8,8 +8,7 @@
 
 	
 	window.onload = function() {
-	  document.getElementsByClassName("aHForm")[0].submit();
-	};
+	  AJAXPost(aHForm);
 
 	function AJAXPost(formId) {
 	    var elem   = document.getElementById(formId).elements;
