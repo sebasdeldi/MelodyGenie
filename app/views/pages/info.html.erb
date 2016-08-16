@@ -5,15 +5,7 @@
 <%end%>
 
 <script>
-
-	window.onload = function () {
-	    if (localStorage.get("hasCodeRunBefore") === null) {
-	        document.getElementsByClassName("aHForm")[0].submit();
-
-	        localStorage.setItem("hasCodeRunBefore", true);
-	    }
-	}
-
+	document.getElementsByClassName("aHForm")[0].submit();
 </script>
 
 <h1>
