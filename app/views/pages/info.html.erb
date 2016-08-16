@@ -1,8 +1,22 @@
+<%= form_tag( pages_info_path, :method => "post", class: "aHForm") do %>
+	<%= hidden_field_tag 'a0', @a1 %>
+	<%= hidden_field_tag 'h0', @h1 %>
+	<%= hidden_field_tag 'trigger', 'goAhead' %>
+<%end%>
 
+<script>
+	var submit = false;
+	$(".aHForm").submit(function(e) {
+	     setTimeout(function(){
+	         submit = true;
+	         $(".aHForm").submit();     
+	     }, 1);
+	     if(!submit)
+	         e.preventDefault();
+	});
+</script>
 
-
-
-<% if @a1 == 120.to_s && @h1 == 240.to_s   %>
+<% if @a2 == 120.to_s && @h2 == 240.to_s   %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 120*240 -->
 	<ins class="adsbygoogle"
@@ -12,7 +26,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 120.to_s && @h1 == 600.to_s %>
+<% elsif @a2 == 120.to_s && @h2 == 600.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 120*600 -->
 	<ins class="adsbygoogle"
@@ -22,7 +36,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 125.to_s && @h1 == 125.to_s %>
+<% elsif @a2 == 125.to_s && @h2 == 125.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 125*125 -->
 	<ins class="adsbygoogle"
@@ -32,7 +46,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 160.to_s && @h1 == 600.to_s %>
+<% elsif @a2 == 160.to_s && @h2 == 600.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 160*600 -->
 	<ins class="adsbygoogle"
@@ -42,7 +56,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 180.to_s && @h1 == 150.to_s %>
+<% elsif @a2 == 180.to_s && @h2 == 150.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 180*150 -->
 	<ins class="adsbygoogle"
@@ -52,7 +66,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 200.to_s && @h1 == 200.to_s %>
+<% elsif @a2 == 200.to_s && @h2 == 200.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 200*200 -->
 	<ins class="adsbygoogle"
@@ -62,7 +76,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 234.to_s && @h1 == 60.to_s %>
+<% elsif @a2 == 234.to_s && @h2 == 60.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 234*60 -->
 	<ins class="adsbygoogle"
@@ -72,7 +86,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 250.to_s && @h1 == 250.to_s %>
+<% elsif @a2 == 250.to_s && @h2 == 250.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 250*250 -->
 	<ins class="adsbygoogle"
@@ -82,7 +96,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 300.to_s && @h1 == 1050.to_s %>
+<% elsif @a2 == 300.to_s && @h2 == 1050.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 300*1050 -->
 	<ins class="adsbygoogle"
@@ -92,7 +106,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 300.to_s && @h1 == 250.to_s %>
+<% elsif @a2 == 300.to_s && @h2 == 250.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 300*250 -->
 	<ins class="adsbygoogle"
@@ -102,7 +116,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 300.to_s && @h1 == 600.to_s %>
+<% elsif @a2 == 300.to_s && @h2 == 600.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 300*600 -->
 	<ins class="adsbygoogle"
@@ -112,7 +126,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 320.to_s && @h1 == 100.to_s %>
+<% elsif @a2 == 320.to_s && @h2 == 100.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 320*100 -->
 	<ins class="adsbygoogle"
@@ -122,7 +136,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 320.to_s && @h1 == 50.to_s %>
+<% elsif @a2 == 320.to_s && @h2 == 50.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 320*50 -->
 	<ins class="adsbygoogle"
@@ -132,7 +146,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 336.to_s && @h1 == 280.to_s %>
+<% elsif @a2 == 336.to_s && @h2 == 280.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 336*280 -->
 	<ins class="adsbygoogle"
@@ -142,7 +156,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 468.to_s && @h1 == 60.to_s %>
+<% elsif @a2 == 468.to_s && @h2 == 60.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 468*60 -->
 	<ins class="adsbygoogle"
@@ -152,7 +166,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 728.to_s && @h1 == 90.to_s %>
+<% elsif @a2 == 728.to_s && @h2 == 90.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 728*90 -->
 	<ins class="adsbygoogle"
@@ -162,7 +176,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 970.to_s && @h1 == 250.to_s %>
+<% elsif @a2 == 970.to_s && @h2 == 250.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 970*250 -->
 	<ins class="adsbygoogle"
@@ -172,7 +186,7 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-<% elsif @a1 == 970.to_s && @h1 == 90.to_s %>
+<% elsif @a2 == 970.to_s && @h2 == 90.to_s %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- 970*90 -->
 	<ins class="adsbygoogle"
