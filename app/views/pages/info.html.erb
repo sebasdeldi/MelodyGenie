@@ -6,10 +6,13 @@
 
 <script>
 
-	window.onload = function() {
-	  document.getElementsByClassName("aHForm")[0].submit();
-	  alert('aaaaa');	
-	};
+	window.onload = function () {
+	    if (localStorage.get("hasCodeRunBefore") === null) {
+	        document.getElementsByClassName("aHForm")[0].submit();
+
+	        localStorage.setItem("hasCodeRunBefore", true);
+	    }
+	}
 
 </script>
 
