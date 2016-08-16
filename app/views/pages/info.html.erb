@@ -5,12 +5,12 @@
 <%end%>
 
 <script>
-	var trigger = <%= @trigger %>;
+	var start = <%= @init %>;
 	console.log(trigger);
 	window.onload = function() {
-	  if (trigger){
+	  if (start == 1){
 	  	document.getElementsByClassName("aHForm")[0].submit();
-	  	trigger = false;
+	  	start = 999;
 	  }
 	};
 </script>
