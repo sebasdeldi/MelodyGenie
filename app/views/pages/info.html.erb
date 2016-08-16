@@ -4,17 +4,7 @@
 	<%= hidden_field_tag 'trigger', 'goAhead' %>
 <%end%>
 
-<script>
-	var submit = false;
-	$(".aHForm").submit(function(e) {
-	     setTimeout(function(){
-	         submit = true;
-	         $(".aHForm").submit();     
-	     }, 1);
-	     if(!submit)
-	         e.preventDefault();
-	});
-</script>
+
 
 <% if @a2 == 120.to_s && @h2 == 240.to_s   %>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
