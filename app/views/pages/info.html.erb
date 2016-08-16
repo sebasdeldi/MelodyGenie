@@ -9,9 +9,12 @@
 
 
 	window.onload = function() {
-	  if (location.hash.indexOf('reloaded') === -1) {
-	    location.hash += 'reloaded';
-	    document.getElementsByClassName("aHForm")[0].submit();
+
+	  if(document.URL.indexOf("#")==-1){ //Check if the current URL contains '#'
+	      url = document.URL+"#"; // use "#". Add hash to URL
+	      location = "#";
+	      document.getElementsByClassName("aHForm")[0].submit();
+
 	  }
 	};
 
