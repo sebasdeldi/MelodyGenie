@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 		end
 
 		if params[:trigger].present?
-			@trigger = true;
+			@trigger = params[:trigger]
 			@h2 = params[:h0]
 			@a2 = params[:a0]
 		end
